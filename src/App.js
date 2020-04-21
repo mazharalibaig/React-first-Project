@@ -6,7 +6,7 @@ class App extends Component{
   constructor(props){
     super(props);
     this.state={
-      message:"Hello Coding Garden from State!!",
+      message:"Quarantine Productivity",
       newTodo: '',
       todos: [{
         title: 'Learn React!',
@@ -32,6 +32,39 @@ class App extends Component{
       }]
     })
   }
+  toggleTodoDone(event,index){
+    
+    const todos = [...this.state.todos];
+    todos[index] = {...todos[index]};
+    todos[index].done = event.target.checked;
+    this.setState({
+      todos
+    });
+  }
+  removeTodo(index){
+    const todos = [...this.state.todos];
+    todos.splice(index,1); 
+    this.setState({
+      todos
+    });
+  }
+  allDone(){
+    const todos = this.state.todos.map(todo => {
+      return{
+        ...todo,
+        done: true
+      }
+    });
+    this.setState({
+      todos
+    });
+  }
+  removeAll(){
+    const todos = [];
+    this.setState({
+      todos
+    });
+  }
   render(){
     return (
       <div className="App">
@@ -43,9 +76,14 @@ class App extends Component{
         </form>
         <ol>
           {this.state.todos.map((todos,index) => (
-            <li key={index}>{todos.title}</li>
+            <li key={index}><input onChange={(event) => this.toggleTodoDone(event,index)}type="checkbox" checked={todos.done}/>
+            <span style={{ textDecoration: todos.done ? 'line-through':'inherit'}}>{todos.title}</span>
+            <button onClick={(index) => this.removeTodo(index)}>   Remove</button>
+            </li>
           ))}
         </ol>
+        <button onClick={() => this.allDone()}> All Done</button>
+        <button onClick={() => this.removeAll()}> Remove All</button>
       </div>
     );
   }
