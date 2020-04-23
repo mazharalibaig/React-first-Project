@@ -1,6 +1,11 @@
 ### Simple Todo App using React
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### Screenshot:
+
+![](https://github.com/mazharalibaig/React-first-Project/blob/master/images/Screenshot%20from%202020-04-23%2018-28-06.png)
+
+
 
 ## Available Scripts
 
