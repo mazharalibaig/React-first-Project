@@ -13,30 +13,106 @@ code {
 }
 input [type="checkbox"] {
   display: inline;
-  width: 100%;
+  content: "\2713";
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+  font-size: 15px;
+  color: #f3f3f3;
+  text-align: center;
+  line-height: 15px;
 }
 .rembut{
   margin-left: 10px;
+  font-size: 11px;
 }
 .App{
   margin-left: 650px;
   width: 100%;
 }
+body{
+
+  background-color: rgb(167, 162, 162);
+}
 body, html{
   margin:0;
   padding:0;
-}
-/* body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
 
-input[type="checkbox"] {
-  display: inline;
-  width: auto;
+  font-family: Rubik Mono One;
 }
-
-.done {
-  text-decoration: line-through;
+div{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin:auto;
+}
+ul{
+  list-style-type: none;
+}
+.list{
+  position: relative;
+  font-size: 30px;
+}
+.rest{
+  position: relative;
+  float: left;
+  width: 40em;
+  top: 3em;
+  margin-right: 1em;
+  left: -2.5%;
+}
+.App{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 100px;
+  
+  display: block;
+  /* background-color: darkviolet; */
+}
+form{
+  /* background-color: aquamarine; */
+  display:inline;
+}
+.lab{
+  /* background-color: blue; */
+  font-family: Rubik Mono One;
+  font-size: 30px;
+}
+.header{
+  /* background-color: brown; */
+  position: relative;
+  font-size: 50px;
+  left: -10%;
+  font-family: Rubik Mono One;
+}
+.inp{
+  /* background-color: burlywood; */
+  border-color: darkslategrey;
+  border-width: 2px;
+  
+}
+/* button{
+  background-color: chartreuse;
 } */
+.submitbutton{
+  border-width: 2px;
+  border-color: rgb(5, 5, 4);
+  background-color: whitesmoke;
+  color: rgb(5, 5, 4);
+  position: relative;
+  top: 3px;
+}
+ul{
+  position: relative;
+  top: 30px;
+  left: -6%;
+}
+.endbut{
+  position: relative;
+  margin-top: 40px;
+  
+}
+li{
+  margin-top: 10px;
+}

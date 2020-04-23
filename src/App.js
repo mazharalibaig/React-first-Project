@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import NewTodoForm from './NewTodoForm';
 import './App.css';
 import TodoList from './TodoList';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component{
   constructor(props){
@@ -68,12 +69,16 @@ class App extends Component{
   }
   render(){
     return (
-      <div className="App">
-        <h1>{this.state.message}</h1>
+      <div className="App px-auto">
+        <h1 className="header" >{this.state.message}</h1>
+        <div className="rest">
         <NewTodoForm formSubmitted={this.formSubmitted.bind(this)} newTodoChanged={this.newTodoChanged.bind(this)} newTodo={this.state.newTodo}/>
         <TodoList todos={this.state.todos} removeTodo={this.removeTodo.bind(this)} toggleTodoDone={this.toggleTodoDone.bind(this)}/>
-        <button onClick={() => this.allDone()}> All Done</button>
-        <button onClick={() => this.removeAll()}> Remove All</button>
+        <div className="endbut">
+          <button className="alldone btn btn-success btn-block" onClick={() => this.allDone()}> All Done</button>
+          <button className="removeall btn btn-danger btn-block" onClick={() => this.removeAll()}> Remove All</button>
+        </div>
+        </div>
       </div>
     );
   }

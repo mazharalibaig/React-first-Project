@@ -3,7 +3,7 @@ import TodoItem from './TodoItem'
 
 const TodoList = (props) => {
     return(
-        <ol>
+        <ul>
           {props.todos.map((todos,index) => (
               <TodoItem 
               key={index}
@@ -13,7 +13,7 @@ const TodoList = (props) => {
               removeTodo={props.removeTodo}
               />
           ))}
-        </ol>
+        </ul>
     );
 }
 

@@ -2,9 +2,9 @@ import React from 'react';
 const NewTodoForm = (props) => {
     return(
         <form onSubmit={props.formSubmitted}>
-          <label htmlFor = "newTodo">New Todo </label>
-          <input onChange={props.newTodoChanged} id="newTodo" name="newTodo" value={props.newTodo}/>
-          <button type ="submit">Add Todo</button>
+          <label className="lab" htmlFor = "newTodo">Enter New Todo: </label>
+          <input className="inp form-control" onChange={props.newTodoChanged} placeholder="Kuch toh kaam karle" id="newTodo" name="newTodo" value={props.newTodo}/>
+          <button className="submitbutton btn btn-default btn-lg btn-block" type ="submit">Add Todo</button>
         </form>
     );
 }
